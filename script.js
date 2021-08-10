@@ -1,6 +1,6 @@
 const menuBars = document.querySelector('#menu-bars');
 const overlay = document.querySelector('#overlay');
-const navigationItems = document.querySelectorAll('.nav');
+const navigationItems = document.querySelectorAll('.nav-item');
 
 const toggleNav = () => {
   // Toggle: Menu Bars Open/Closed
@@ -10,13 +10,13 @@ const toggleNav = () => {
     // slide in
     overlay.classList.replace('overlay-slide-left', 'overlay-slide-right');
     navigationItems.forEach((item, i) => {
-      item.classList.replace(`slide-out-${i+1}`, `slide-in-${i+1}`);
+      item.classList.replace(`slide-out-${i+1}`, `slide-in-${i + 1}`);
     })
   } else {
     // slide out
     overlay.classList.replace('overlay-slide-right', 'overlay-slide-left');
     navigationItems.forEach((item, i) => {
-      item.classList.replace(`slide-in-${i+1}`, `slide-out-${i+1}`);
+      item.classList.replace(`slide-in-${i+1}`, `slide-out-${i + 1}`);
     })
   }
 }
